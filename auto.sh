@@ -26,3 +26,7 @@ cd ./ardupilot/ArduCopter
 make flymaple
 echo "make ArduCopter dome"
 
+cp /tmp/ArduCopter.build/ArduCopter.hex ./
+echo "The ArduCopter.hex use jtag flash"
+
+
