@@ -1,0 +1,35 @@
+From 0376fdebe3b9c63a91c0d38b1efa84a939be6e65 Mon Sep 17 00:00:00 2001
+From: "shilin.guo" <552002499@qq.com>
+Date: Thu, 16 Jun 2016 23:33:20 +0800
+Subject: [PATCH 2/5] Add flymaple config.mk
+
+flymaple is baseline stm32f103
+
+ Changes to be committed:
+	new file:   ardupilot/config.mk
+---
+ ardupilot/config.mk | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 ardupilot/config.mk
+
+diff --git a/ardupilot/config.mk b/ardupilot/config.mk
+new file mode 100644
+index 0000000..eb72b6f
+--- /dev/null
++++ b/ardupilot/config.mk
+@@ -0,0 +1,12 @@
++#config.mk START
++# Select maple_RET6 for Flymaple
++BOARD = maple_RET6
++# HAL_BOARD determines default HAL target.
++HAL_BOARD ?= HAL_BOARD_FLYMAPLE
++# The communication port used to communicate with the Flymaple
++PORT = /dev/ttyACM0
++# You must provide the path to the libmaple library directory:
++LIBMAPLE_PATH = $(HOME)/libmaple
++# Also, the ARM compiler tools MUST be in your current PATH like:
++# export PATH=$PATH:~/libmaple/arm/bin
++#config.mk END
+-- 
+1.9.1
+

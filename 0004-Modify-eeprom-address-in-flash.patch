@@ -1,0 +1,29 @@
+From be02bebab26f1c835b89676f706da8ee4da7ea85 Mon Sep 17 00:00:00 2001
+From: "shilin.guo" <552002499@qq.com>
+Date: Thu, 16 Jun 2016 23:40:17 +0800
+Subject: [PATCH 4/5] Modify eeprom address in flash stm32f103RC flash address
+ (0x8000000 to 0x8040000) [*] stm32f103RE flash address (0x8000000 to
+ 0x8080000)
+
+ Changes to be committed:
+	modified:   ardupilot/libraries/AP_HAL_FLYMAPLE/utility/EEPROM.h
+---
+ ardupilot/libraries/AP_HAL_FLYMAPLE/utility/EEPROM.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ardupilot/libraries/AP_HAL_FLYMAPLE/utility/EEPROM.h b/ardupilot/libraries/AP_HAL_FLYMAPLE/utility/EEPROM.h
+index 913e71f..69cf984 100644
+--- a/ardupilot/libraries/AP_HAL_FLYMAPLE/utility/EEPROM.h
++++ b/ardupilot/libraries/AP_HAL_FLYMAPLE/utility/EEPROM.h
+@@ -29,7 +29,7 @@
+ 		#define EEPROM_START_ADDRESS	((uint32)(0x8005000 - 2 * EEPROM_PAGE_SIZE))
+ 	#elif defined (MCU_STM32F103ZE) || defined (MCU_STM32F103VE) || defined (MCU_STM32F103RE)
+ 		//#define EEPROM_START_ADDRESS	((uint32)(0x8080000 - 2 * EEPROM_PAGE_SIZE))
+-		#define EEPROM_START_ADDRESS	((uint32)(0x8005000 - 2 * EEPROM_PAGE_SIZE))
++		#define EEPROM_START_ADDRESS	((uint32)(0x8040000 - 2 * EEPROM_PAGE_SIZE))
+ 	#elif defined (MCU_STM32F205VE) || defined (MCU_STM32F406VG)
+ 		#define EEPROM_START_ADDRESS	((uint32)(0x8010000 - 2 * EEPROM_PAGE_SIZE))
+ 	#else
+-- 
+1.9.1
+

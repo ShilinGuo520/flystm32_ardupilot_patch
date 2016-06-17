@@ -1,0 +1,27 @@
+From 51b1ba383464b6ac89395e0f65ad31f354d53caa Mon Sep 17 00:00:00 2001
+From: "shilin.guo" <552002499@qq.com>
+Date: Thu, 16 Jun 2016 23:36:53 +0800
+Subject: [PATCH 3/5] Add libmaple path: ../libmaple
+
+ Changes to be committed:
+	modified:   ardupilot/config.mk
+---
+ ardupilot/config.mk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/ardupilot/config.mk b/ardupilot/config.mk
+index eb72b6f..79b46b8 100644
+--- a/ardupilot/config.mk
++++ b/ardupilot/config.mk
+@@ -6,7 +6,7 @@ HAL_BOARD ?= HAL_BOARD_FLYMAPLE
+ # The communication port used to communicate with the Flymaple
+ PORT = /dev/ttyACM0
+ # You must provide the path to the libmaple library directory:
+-LIBMAPLE_PATH = $(HOME)/libmaple
++LIBMAPLE_PATH = ./../libmaple
+ # Also, the ARM compiler tools MUST be in your current PATH like:
+ # export PATH=$PATH:~/libmaple/arm/bin
+ #config.mk END
+-- 
+1.9.1
+
